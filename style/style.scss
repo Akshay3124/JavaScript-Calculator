@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+}
+
+.calc {
+    display: flex;
+    height: 100vh;
+
+    .section {
+        box-shadow: 10px 5px grey; 
+        text-align: center;
+        width: 500px;
+        height: 500px;
+        background: white;
+        border: 2px solid rgb(201, 188, 188);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        
+        h1 {
+            font-size: 1em;
+            margin: 0;
+            background: black;
+            color: white;
+            text-transform: uppercase;
+            padding: 15px;
+        }
+
+        #input {
+            height: 50px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            padding: 10px 50px 0 0;
+            text-align: right;
+            font-size: 1.8rem;
+            margin: 10px;
+            overflow-x: auto;
+            transition: all .2s ease-in-out;
+            
+            &:hover {
+                border: 1px solid #bbb;
+                box-shadow: inset 0px 1px 4px 0px gray;
+            }
+            
+        }
+
+    }
+}
+
+.buttons {
+    border-spacing: 10px;
+
+    .operator td {
+        background: #ddd;
+    }
+
+    td {
+        transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+        border: 1px solid #bbb;
+        padding: 10px;
+        background: #f9f9f9;
+
+        &:hover {
+            background: rgb(233, 233, 233);
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+            border-color: #aaa;
+        }
+
+        &:active {
+            font-weight: bold;
+        }
+    }
+
+    
+    td.ans {
+        color: white;
+        background: #4d90fe;
+
+        &:hover {
+            background: #307CF9;
+            -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+            border-color: #1857BB;
+        }
+    }
+}
